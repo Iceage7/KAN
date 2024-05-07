@@ -845,7 +845,8 @@ class KAN(nn.Module):
         if loss_fn == None:
             loss_fn = loss_fn_eval = lambda x, y: torch.mean((x - y) ** 2)
         else:
-            loss_fn = loss_fn_eval = loss_fn
+            #TODO
+            loss_fn = loss_fn_eval = 1 - loss_fn
 
         grid_update_freq = int(stop_grid_update_step / grid_update_num)
 
